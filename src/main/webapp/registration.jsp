@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <%@include file="./includes/header.jsp"%>
     <link rel="stylesheet" href="./static_files/cstyles.css">
     <script src="./static_files/clientscript.js" defer></script>
     <title>e-EXAM portal</title>
 </head>
 
 <body>
+	<%@include file="./includes/navbar.jsp"%>
     <div class="register-container">
     <form class="register-form rounded" action="register_servlet" method="post" onsubmit="return registerValidation()">
         <h2><b>Fill the registration form</b></h2>

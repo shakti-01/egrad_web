@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import beans.User;
 
@@ -77,5 +80,53 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		return auth_user;
+	}
+	
+	public User getUserDetail(String userid) throws ClassNotFoundException, SQLException {
+		User u = new User();
+		Map<String, String> genmap = Map.of(
+			    "O", "Others",
+			    "M", "Male",
+			    "F","Female"
+			);
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			Statement stmt = conn.createStatement();
+			
+			String sql = "SELECT name,email,age,gender,clg_addr,branch,skills FROM EGRAD_USER WHERE userid='"+userid+"'";
+			stmt.executeUpdate(sql);
+			ResultSet rs= stmt.executeQuery(sql);  
+			while(rs.next()) {
+				u.setName(rs.getString(1));
+				u.setEmail(rs.getString(2));
+				u.setAge(Integer.parseInt(rs.getString(3)));
+				u.setGender(genmap.get(rs.getString(4)));
+				u.setCollegeAddress(rs.getString(5));
+				u.setBranch(rs.getString(6));
+				
+				String skills_arr = rs.getString(7);
+				List<String> skills = new ArrayList<String>();
+				if(skills_arr.charAt(0) == '1') {
+					skills.add("C");
+				}
+				if(skills_arr.charAt(1) == '1') {
+					skills.add("Java");
+				}
+				if(skills_arr.charAt(2) == '1') {
+					skills.add("Python");
+				}
+				if(skills_arr.charAt(3) == '1') {
+					skills.add("JSP");
+				}
+				u.setSkills(skills);
+			}
+
+			System.out.println("userdao-userLogin: Fetched data...");	
+		 
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return u;
 	}
 }
