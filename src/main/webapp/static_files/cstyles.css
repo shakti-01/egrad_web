@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+:root{
+    --beige: rgb(255, 237, 215);
+    --grey: rgb(212, 212, 212);
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: itim;
+}
+/*------------------------------hero-----------------------*/
+.hero-section{
+    padding: 0 1em;
+    padding-right: 0;
+}
+.search-section{
+    margin:2em 0;
+    margin-right:35vw;
+    margin-left: 1em;
+}
+.sbar{
+    margin: 1em 0;
+}
+.csearch-btn{
+    position: relative;
+}
+.hero-img{
+    max-width: 20vw;
+}
+.material-icons.searchsym{
+    position: absolute;
+    top:5px;
+    right:7px;
+}
+/*------------------------------content-----------------------*/
+.cgrid-container{
+    display: grid;
+    column-gap:2em;
+    justify-content: space-between;
+    align-content: start;
+    grid-template-columns: 1fr auto;
+}
+/*------------------------------dashboard-----------------------*/
+.cdashboard{
+    padding: 0.8em;
+    background: var(--grey);
+}
+/*------------------------------footer-----------------------*/
+.c-footer{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background: var(--grey);
+}
+.f-link{
+    padding: 1em;
+}
+/*------------------------------registration page-----------------------*/
+.register-container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--grey);
+}
+
+.register-form{
+    background: white;
+    padding: 1.5em;
+    margin:4em 0;
+    min-width: 50vw;
+    border: var(--grey);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.skill-label{
+    border-left: 0.2em solid rgb(87, 87, 234);
+    padding-left: 0.4em;
+}
