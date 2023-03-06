@@ -67,7 +67,6 @@ public class UserDao {
 			Statement stmt = conn.createStatement();
 			
 			String sql = "SELECT userid,name FROM EGRAD_USER WHERE EMAIL='"+email+"' AND PWD = '"+pwd+"'";
-			stmt.executeUpdate(sql);
 			ResultSet rs= stmt.executeQuery(sql);  
 			while(rs.next()) {
 				auth_user[0] = rs.getString(1);

@@ -38,12 +38,11 @@ User u = ud.getUserDetail(userid);
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3"><%=u.getName() %></h5>
-            <p class="text-muted mb-1">Full Stack Developer</p>
-            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-            <div class="d-flex justify-content-center mb-2">
+            <p class="text-muted mb-4"><%=u.getGender()+" - "+u.getAge() %></p>
+            <!-- <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-primary">Follow</button>
               <button type="button" class="btn btn-outline-primary ms-1">Message</button>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -55,7 +54,7 @@ User u = ud.getUserDetail(userid);
                 <p class="mb-0">Full Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Johnatan Smith</p>
+                <p class="text-muted mb-0"><%=u.getName() %></p>
               </div>
             </div>
             <hr>
@@ -64,34 +63,52 @@ User u = ud.getUserDetail(userid);
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
+                <p class="text-muted mb-0"><%=u.getEmail() %></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
+                <p class="mb-0">Gender</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
+                <p class="text-muted mb-0"><%=u.getGender() %></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
+                <p class="mb-0">Age</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
+                <p class="text-muted mb-0"><%=u.getAge() %></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Address</p>
+                <p class="mb-0">College Address</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                <p class="text-muted mb-0"><%=u.getCollegeAddress() %></p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Branch</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%=u.getBranch() %></p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Skills</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%=u.getSkills() %></p>
               </div>
             </div>
           </div>

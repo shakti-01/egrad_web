@@ -39,4 +39,14 @@
     <servlet-name>logout_servlet</servlet-name>
     <url-pattern>/logout_servlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>checkans_servlet</display-name>
+    <servlet-name>checkans_servlet</servlet-name>
+    <servlet-class>servlet.checkans_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkans_servlet</servlet-name>
+    <url-pattern>/checkans_servlet</url-pattern>
+  </servlet-mapping>
 </web-app>
