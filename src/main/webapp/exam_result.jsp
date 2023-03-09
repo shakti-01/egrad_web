@@ -45,7 +45,7 @@ int MAXQ=10;
 		<div class="text-center mt-4">
 			<h2 class="text-success">Congratulations!</h2>
 			<div class="progress mt-4" style="height: 30px;">
-			  <div class="progress-bar bg-success" role="progressbar" style="width: <%=(sum/(MAXQ*1.0f))*100.0f %>%; animation: animate 2s linear forwards;"></div>
+			  <div class="progress-bar bg-success" role="progressbar" style="width: <%=(sum/(MAXQ*1.0f))*100.0f %>%;"></div>
 			</div>
 			<p class="mt-2">You scored <%=(sum/(MAXQ*1.0f))*100.0f %>% in the exam</p>
 		</div>

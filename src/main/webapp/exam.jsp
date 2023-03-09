@@ -16,7 +16,7 @@ String qno = request.getParameter("qno");
 ExamDao ed = new ExamDao();
 Question q = ed.getQuestion(sub,qno);
 
-int MAXQ = 5;
+int MAXQ = 10;
 %> 
 <!DOCTYPE html>
 <html>
@@ -157,8 +157,23 @@ function updateDateTime(){
 		        console.log("Error: " + textStatus);
 		    }
 		});
-
 	}
+	function toggleFullScreen() {
+	  if (!document.fullscreenElement) {
+	    document.documentElement.requestFullscreen();
+	  } else if (document.exitFullscreen) {
+	    document.exitFullscreen();
+	  }
+	}
+
+	document.addEventListener("keydown",(e) => {
+		    if (e.key === "Enter") {
+		      toggleFullScreen();
+		    }
+		  },false
+	);
+	
+
 </script>
 </body>
 </html>

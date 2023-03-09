@@ -10,7 +10,7 @@ if(userid != null && username != null) {
 else{
 	response.sendRedirect("index.jsp");
 }
-int MAXQ = 5;
+int MAXQ = 10;
 String msg = (String)request.getSession().getAttribute("msg");
 ArrayList<Integer> score = new ArrayList<>(Collections.nCopies(20, 0));
 request.getSession().setAttribute("curr_score", score);
@@ -19,7 +19,7 @@ request.getSession().setAttribute("curr_score", score);
 <html>
 <head>
 <%@include file="./includes/header.jsp"%>
-<title>Insert title here</title>
+<title>exam-pre</title>
 </head>
 <body>
 <%@include file="./includes/navbar.jsp"%>
@@ -38,9 +38,11 @@ request.getSession().setAttribute("curr_score", score);
 					<li><strong>No Copying:</strong> Copying questions or answers from any source is strictly prohibited.</li>
 					<li><strong>Penalties:</strong> Any violation of the exam rules may result in penalties, including disqualification from the exam.</li>
 				</ol>
-            </div> 
+</div> 
+<div class="rounded m-4 p-3" style="background: #eee;">
         	<a href="exam.jsp?sub=MATH&qno=1" class="btn btn-primary mb-2">Math</a><br>
         	<a href="exam.jsp?sub=ENV&qno=1" class="btn btn-primary mb-2">Environmental Studies</a><br>
-        	<a href="" class="btn btn-primary mb-2">Subject 1</a>
+        	<a href="exam.jsp?sub=OS&qno=1" class="btn btn-primary mb-2">Operating System</a>
+</div>
 </body>
 </html>

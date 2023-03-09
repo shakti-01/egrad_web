@@ -28,7 +28,8 @@ String msg = (String)request.getSession().getAttribute("msg");
             <input type="text" class="form-control sbar" placeholder="search..."/>
             <button class="btn btn-primary csearch-btn">Search &emsp;<i class="material-icons searchsym">&#xe8b6;</i></button>
           </div>
-            <a href="pre_exam.jsp"><button class="btn btn-primary">Proceed to give exam</button></a>
+          <div class="mb-3" style="max-width:100%;"><img class="rounded" src="./static_files/img/books.jpg" alt="book" style="overflow:none;filter:brightness(45%);width:100%;"/></div>
+            <a href="pre_exam.jsp"><button class="btn btn-primary mb-3">Proceed to give exam</button></a>
         </div>
         <% if(userid == null){ %>
         <div class="cdashboard card">
