@@ -8,13 +8,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.jsp">e-Exam</a>
-              </li>
+              </li>		
               <li class="nav-item">
                 <a class="nav-link" href="#">Open forum</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">e-Repository</a>
+                <a class="nav-link" href="myrepo.jsp" tabindex="-1" aria-disabled="true">e-Repository</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="mywall.jsp" tabindex="-1" aria-disabled="true">My-Wall</a>

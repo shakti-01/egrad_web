@@ -10,6 +10,7 @@ else{
 	response.sendRedirect("index.jsp");
 }
 String msg = (String)request.getSession().getAttribute("msg");
+session.setAttribute("countDownDate", null);
 ArrayList<Integer> score = (ArrayList<Integer>)request.getSession().getAttribute("curr_score");
 int sum=0;
 for (int i = 0; i < score.size(); i++){

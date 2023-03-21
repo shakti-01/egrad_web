@@ -54,13 +54,13 @@ int MAXQ = 10;
 		font-weight: bold;
 		border:none;
 	}
-
 </style>
 </head>
 <body>
 <%@include file="./includes/navbar.jsp"%>
 
 <div class="container">
+	<jsp:include page="./includes/countdown.jsp" />
 		<h1>Question <%=q.getQno() %></h1>
 		<p><%=q.getQuestion() %></p>
 		<div class="form-check">
