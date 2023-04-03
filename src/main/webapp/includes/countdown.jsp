@@ -31,7 +31,7 @@
 			}
 		}, 1000);
 		// Function to set a cookie
-	    function setCookie(name, value, days) {
+	    /*function setCookie(name, value, days) {
 	        var expires = "";
 	        if (days) {
 	            var date = new Date();
@@ -51,7 +51,7 @@
 	            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
 	        }
 	        return null;
-	    }
+	    }*/
 	</script>
 </head>
 <body>

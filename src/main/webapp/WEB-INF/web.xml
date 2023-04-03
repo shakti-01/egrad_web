@@ -49,4 +49,24 @@
     <servlet-name>checkans_servlet</servlet-name>
     <url-pattern>/checkans_servlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addpost_servlet</display-name>
+    <servlet-name>addpost_servlet</servlet-name>
+    <servlet-class>servlet.addpost_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addpost_servlet</servlet-name>
+    <url-pattern>/addpost_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addreply_servlet</display-name>
+    <servlet-name>addreply_servlet</servlet-name>
+    <servlet-class>servlet.addreply_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addreply_servlet</servlet-name>
+    <url-pattern>/addreply_servlet</url-pattern>
+  </servlet-mapping>
 </web-app>

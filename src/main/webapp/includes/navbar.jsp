@@ -10,7 +10,7 @@
                 <a class="nav-link active" aria-current="page" href="index.jsp">e-Exam</a>
               </li>		
               <li class="nav-item">
-                <a class="nav-link" href="#">Open forum</a>
+                <a class="nav-link" href="myforum.jsp">Open forum</a>
               </li>
               
               <li class="nav-item">
